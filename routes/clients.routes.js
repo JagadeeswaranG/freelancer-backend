@@ -4,11 +4,6 @@ const { authenticate } = require('../lib/authentication');
 var router = express.Router();
 
 /* Clients Route. */
-// router.post('/register', clientRegister);
-
-// router.get("/", allClients);
-
-// router.post("/login", clientLogin);
 
 router.post("/post_project/:cId", authenticate, addProject);
 

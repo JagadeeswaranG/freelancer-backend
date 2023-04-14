@@ -1,14 +1,9 @@
 var express = require('express');
-const { freelancerRegister, allfreelancer, freelancerLogin, projects, viewProjects, applyProject } = require('../controller/freelancer.controller');
+const { projects, viewProjects, applyProject } = require('../controller/freelancer.controller');
 const { authenticate } = require('../lib/authentication');
 var router = express.Router();
 
 /* Freelancers Route. */
-router.post('/register', freelancerRegister);
-
-router.get("/", allfreelancer);
-
-router.post("/login", freelancerLogin);
 
 router.get("/projects/:fId",authenticate, projects);
 
